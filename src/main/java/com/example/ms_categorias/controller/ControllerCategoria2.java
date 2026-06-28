@@ -26,7 +26,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/categorias2")
+@RequestMapping("/categorias")
 @RequiredArgsConstructor
 @Tag(name = "Categorías V2", description = "Controlador de prueba para la gestión de categorías con Swagger")
 public class ControllerCategoria2 {
@@ -40,13 +40,14 @@ public class ControllerCategoria2 {
         return ResponseEntity.ok(servicioCategoria.obtenerCategorias());
     }
 
-    @GetMapping("/{categoriaId}")
+    @GetMapping("/categoriaId/{categoriaId}")
     @Operation(summary = "Obtener categoría por ID", description = "Busca una categoría específica usando su identificador único")
     @ApiResponses(value = {
         @ApiResponse(responseCode = "200", description = "Categoría encontrada", 
             content = @Content(mediaType = "application/json", schema = @Schema(implementation = DtoResponseCategoria.class))),
         @ApiResponse(responseCode = "404", description = "Categoría no encontrada")
     })
+
     public ResponseEntity<DtoResponseCategoria> obtenerPorId(@PathVariable Long categoriaId) {
         return servicioCategoria.obtenerPorId(categoriaId)
                 .map(ResponseEntity::ok)
