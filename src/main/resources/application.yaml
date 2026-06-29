@@ -6,8 +6,8 @@ spring:
   application:
     name: ms-categorias
 
-datasource:
-  url: jdbc:oracle:thin:@localhost:1521:XE
+datasource:  
+  url: jdbc:oracle:thin:@mmg8hvewk688yrh4_low?TNS_ADMIN=C:/Users/Usuario/Desktop/prueba3FullStrack/ms-proveedores/src/main/resources/Wallet
   username: SCHEMA_CATEGORIAS
   password: FullStack-Bodega1
   driver-class-name: oracle.jdbc.OracleDriver
