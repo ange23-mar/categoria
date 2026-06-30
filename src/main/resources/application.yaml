@@ -37,5 +37,5 @@ springdoc:
 
     ##http://localhost:8081/api/categoria con el controller 1
 ##http://localhost:8087/categorias2 con el controller 2
-##http://localhost:8087/swagger-ui/index.html con swagger para probar el controller 1
+##http://localhost:8081/swagger-ui/index.html con swagger para probar el controller 1
 ##http://localhost:8087/categorias/1 con el controller 
